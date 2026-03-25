@@ -166,7 +166,17 @@
             </div>
         </div>
 
-        <a href="mailto:paranode.dev@gmail.com" class="cta-button">Contact Support</a>
+        <button onclick="copyEmail()" class="cta-button" id="copyBtn">Contact Support</button>
+
+<script>
+function copyEmail() {
+  const email = "paranode.dev@gmail.com";
+  navigator.clipboard.writeText(email);
+  const btn = document.getElementById('copyBtn');
+  btn.innerText = "Email Copied!";
+  setTimeout(() => { btn.innerText = "Contact Support"; }, 2000);
+}
+</script>
     </div>
 
     <div class="policy-section">
