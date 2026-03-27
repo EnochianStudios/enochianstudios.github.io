@@ -3,195 +3,185 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Enochian Studios | Professional Ghost Hunting Utilities</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <title>ParaNode | High-Precision Paranormal Utility</title>
     <style>
+        /* Base Tactical Theme */
         :root {
-            --bg: #0f1113;
-            --surface: #1a1d21;
-            --accent: #34d399; /* Refined Mint Green */
-            --text-main: #f3f4f6;
-            --text-dim: #9ca3af;
+            --bg-color: #050505;
+            --text-main: #d1d1d1;
+            --neon-green: #00FF41;
+            --dark-green: #004d14;
         }
 
         body {
-            background-color: var(--bg);
+            background-color: var(--bg-color);
             color: var(--text-main);
-            font-family: 'Inter', -apple-system, sans-serif;
+            font-family: 'Courier New', Courier, monospace;
+            line-height: 1.6;
             margin: 0;
-            display: flex;
-            justify-content: center;
-            padding: 40px 20px;
+            padding: 0;
+            /* Creates a subtle CRT scanline effect */
+            background-image: linear-gradient(rgba(0, 255, 65, 0.03) 1px, transparent 1px);
+            background-size: 100% 4px;
         }
 
         .container {
-            max-width: 900px;
-            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
         }
 
-        header {
-            margin-bottom: 60px;
-            text-align: center;
+        h1, h2, h3 {
+            color: var(--neon-green);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: normal;
         }
 
         h1 {
-            font-size: 2rem;
-            font-weight: 600;
-            letter-spacing: -0.025em;
-            margin: 0;
+            font-size: 2.5rem;
+            margin-bottom: 5px;
+            text-shadow: 0 0 10px rgba(0, 255, 65, 0.5);
         }
 
-        .studio-tag {
-            color: var(--accent);
-            font-size: 0.9rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-        }
-
-        .hero-card {
-            background: var(--surface);
-            border-radius: 12px;
-            padding: 40px;
-            border: 1px solid rgba(255, 255, 255, 0.05);
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            border-bottom: 1px solid #333;
+            padding-bottom: 40px;
             margin-bottom: 40px;
         }
 
-        .hero-card h2 {
-            margin-top: 0;
-            font-size: 1.5rem;
+        .logo {
+            max-width: 250px;
+            height: auto;
+            margin-bottom: 20px;
+            /* Gives the transparent logo a slight neon glow to blend into the terminal vibe */
+            filter: drop-shadow(0 0 15px rgba(0, 255, 65, 0.2)); 
         }
 
-        .feature-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
-            margin-top: 30px;
+        .tagline {
+            font-size: 1.2rem;
+            color: #888;
+            margin-bottom: 30px;
+            letter-spacing: 1px;
         }
 
-        .feature {
-            padding-left: 15px;
-            border-left: 2px solid var(--accent);
+        /* Tactical Data Sections */
+        .section-box {
+            border-left: 2px solid var(--neon-green);
+            padding-left: 20px;
+            margin-bottom: 40px;
+            background: rgba(0, 255, 65, 0.02);
+            padding: 20px;
         }
 
-        .feature h3 {
-            font-size: 1rem;
-            margin: 0 0 5px 0;
+        ul, ol {
+            color: var(--neon-green);
+        }
+
+        ul {
+            list-style-type: square;
+        }
+
+        ul span, ol span {
             color: var(--text-main);
         }
 
-        .feature p {
-            font-size: 0.85rem;
-            color: var(--text-dim);
-            margin: 0;
-        }
-
-        .policy-section {
-            padding: 20px;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            margin-top: 60px;
-        }
-
-        .policy-section h2 {
-            font-size: 1.1rem;
-            color: var(--text-dim);
-            text-transform: uppercase;
-        }
-
-        .policy-text {
-            font-size: 0.9rem;
-            color: var(--text-dim);
-            line-height: 1.7;
-        }
-
-        .cta-button {
+        /* Buttons */
+        .btn {
             display: inline-block;
-            background: var(--accent);
-            color: #000;
             padding: 12px 24px;
-            border-radius: 6px;
+            border: 1px solid var(--neon-green);
+            color: var(--neon-green);
             text-decoration: none;
-            font-weight: 600;
-            font-size: 0.9rem;
-            margin-top: 20px;
-            transition: transform 0.2s;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.2s ease-in-out;
+            background: rgba(0, 255, 65, 0.05);
+            margin-top: 10px;
         }
 
-        .cta-button:hover {
-            transform: translateY(-2px);
+        .btn:hover {
+            background: var(--neon-green);
+            color: var(--bg-color);
+            box-shadow: 0 0 15px var(--neon-green);
         }
 
+        /* Footer */
         footer {
-            margin-top: 80px;
             text-align: center;
-            font-size: 0.8rem;
-            color: var(--text-dim);
-        }
-
-        a { color: var(--accent); text-decoration: none; }
-        
-        @media (max-width: 600px) {
-            .feature-grid { grid-template-columns: 1fr; }
+            border-top: 1px solid #333;
+            padding-top: 20px;
+            font-size: 0.9rem;
+            color: #666;
         }
     </style>
 </head>
 <body>
 
-<div class="container">
-    <header>
-        <div class="studio-tag">EnochianStudios</div>
-        <h1>Precision Paranormal Utilities</h1>
-    </header>
+    <div class="container">
+        <header class="hero">
+            <img src="EStudiosNoBG.png" alt="Enochian Studios Logo" class="logo">
+            <h1>ParaNode</h1>
+            <div class="tagline">High-Precision Paranormal Utility</div>
+            <p>Stop "Hunting." Start Investigating.</p>
+            <a href="#" class="btn">Download for Android</a>
+        </header>
 
-    <div class="hero-card">
-        <h2>ParaNode</h2>
-        <p style="color: var(--text-dim);">A professional-grade EMF diagnostic and phonetic analysis suite designed for field researchers. Built on real-time sensor fusion technology.</p>
-        
-        <div class="feature-grid">
-            <div class="feature">
-                <h3>High-Fidelity Magnetics</h3>
-                <p>Triple-axis raw data visualization with μT precision.</p>
+        <main>
+            <div class="section-box">
+                <h2>I. The Squelch Policy</h2>
+                <p>Developed by Enochian Studios, ParaNode is built on a strict "Privacy-First" architecture. Your data, your evidence, and your location remain strictly on your physical device.</p>
+                <ul>
+                    <li><span><strong>Zero Data Collection:</strong> We do not track, harvest, or sell your telemetry.</span></li>
+                    <li><span><strong>Offline Operation:</strong> Designed for remote locations with zero cellular service.</span></li>
+                    <li><span><strong>No Accounts:</strong> No login, no password, no tracking.</span></li>
+                </ul>
             </div>
-            <div class="feature">
-                <h3>Phonetic Node</h3>
-                <p>210,000+ word library mapped to magnetic flux vectors.</p>
-            </div>
-            <div class="feature">
-                <h3>Export & Analysis</h3>
-                <p>Generate raw .WAV audio session files for forensic investigation.</p>
-            </div>
-            <div class="feature">
-                <h3>Privacy First</h3>
-                <p>Offline architecture. No data collection. No tracking.</p>
-            </div>
-        </div>
 
-        <button onclick="copyEmail()" class="cta-button" id="copyBtn">Contact Support</button>
+            <div class="section-box">
+                <h2>II. Field Deployment (Manual)</h2>
+                <p>ParaNode is a passive monitoring tool. For accurate forensic results:</p>
+                <ol>
+                    <li><span><strong>Isolate:</strong> Place your device on a flat, stable surface away from power outlets or active electronics.</span></li>
+                    <li><span><strong>Calibrate:</strong> Press 'Calibrate' to establish a baseline. This filters out the natural "noise" of the room's electromagnetic field.</span></li>
+                    <li><span><strong>Monitor:</strong> Observe the real-time graph for anomalous spikes breaking the threshold.</span></li>
+                </ol>
+            </div>
 
-<script>
-function copyEmail() {
-  const email = "paranode.dev@gmail.com";
-  navigator.clipboard.writeText(email);
-  const btn = document.getElementById('copyBtn');
-  btn.innerText = "Email Copied!";
-  setTimeout(() => { btn.innerText = "Contact Support"; }, 2000);
-}
-</script>
+            <div class="section-box">
+                <h2>III. Diagnostic Modes</h2>
+                <p>Toggle between primary analysis engines depending on your investigation style:</p>
+                <ul>
+                    <li><span><strong>The Phonetic Node:</strong> A proprietary engine featuring over 210,000 words triggered by precise magnetic flux changes, not randomized timers.</span></li>
+                    <li><span><strong>Raw Data Node:</strong> Bypasses phonetic interpretation entirely to provide unfiltered, raw sensor telemetry.</span></li>
+                </ul>
+            </div>
+
+            <div class="section-box">
+                <h2>IV. Forensic Data Analysis (Pro)</h2>
+                <p>The Pro Node upgrade unlocks full forensic potential for professional investigations.</p>
+                <ul>
+                    <li><span><strong>Custom Nodes:</strong> Tailor parameters by importing targeted phonetic dictionaries to isolate location-specific responses.</span></li>
+                    <li><span><strong>Session Export (.WAV):</strong> Export phonetic session logs and audio data directly for client reports.</span></li>
+                    <li><span><strong>Extended Buffering:</strong> Analyze longer windows of data for subtle patterns.</span></li>
+                </ul>
+            </div>
+
+            <div class="section-box">
+                <h2>Hardware Requirements</h2>
+                <p>ParaNode is a hardware-dependent utility requiring a physical Magnetometer (Compass) sensor. Optimized for high-end flagship devices.</p>
+                <p><em>*Note: If your device lacks a magnetometer, EMF functionality will be disabled.</em></p>
+            </div>
+        </main>
+
+        <footer>
+            <p>Enochian Studios &copy; 2026</p>
+            <p>Technical Support: paranode.dev@gmail.com</p>
+        </footer>
     </div>
-
-    <div class="policy-section">
-        <h2>Privacy Policy</h2>
-        <div class="policy-text">
-            <p>EnochianStudios is committed to user privacy. <strong>ParaNode</strong> is a local-only utility. We do not collect, store, or transmit any personal information, location data, or sensor logs. All data generated during an investigation remains strictly on the user's physical device.</p>
-            <p><strong>Microphone Access and Audio Data:</strong> ParaNode requires access to your device's microphone to capture instrumental trans-communication (ITC) sessions and ambient audio. All recorded audio is processed and saved strictly locally on your device. Enochian Studios does not collect, transmit, store, or share your audio recordings on any remote servers or third-party databases. You retain full control over your audio files and may export or delete them directly from your device at your discretion.</p>
-            <p>For technical inquiries or license support, reach out to <a href="mailto:paranode.dev@gmail.com">paranode.dev@gmail.com</a>.</p>
-        </div>
-    </div>
-
-    <footer>
-        &copy; 2026 EnochianStudios // San Antonio, Texas
-    </footer>
-</div>
 
 </body>
 </html>
