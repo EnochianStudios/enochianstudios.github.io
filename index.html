@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Enochian Studios | High-Precision Paranormal Utilities</title>
+    <title>Enochian Studios | High-Precision Paranormal Utility</title>
     <style>
         /* Base Tactical Theme */
         :root {
@@ -20,7 +20,6 @@
             line-height: 1.6;
             margin: 0;
             padding: 0;
-            /* Creates a subtle CRT scanline effect */
             background-image: linear-gradient(rgba(0, 255, 65, 0.03) 1px, transparent 1px);
             background-size: 100% 4px;
         }
@@ -44,7 +43,6 @@
             text-shadow: 0 0 10px rgba(0, 255, 65, 0.5);
         }
 
-        /* Hero Section */
         .hero {
             text-align: center;
             border-bottom: 1px solid #333;
@@ -56,7 +54,6 @@
             max-width: 250px;
             height: auto;
             margin-bottom: 20px;
-            /* Gives the transparent logo a slight neon glow to blend into the terminal vibe */
             filter: drop-shadow(0 0 15px rgba(0, 255, 65, 0.2)); 
         }
 
@@ -67,13 +64,18 @@
             letter-spacing: 1px;
         }
 
-        /* Tactical Data Sections */
         .section-box {
             border-left: 2px solid var(--neon-green);
             padding-left: 20px;
             margin-bottom: 40px;
             background: rgba(0, 255, 65, 0.02);
             padding: 20px;
+        }
+
+        .policy-box {
+            border: 1px solid #333;
+            border-left: 2px solid #ff3333; /* Red accent for the privacy policy */
+            background: rgba(255, 0, 0, 0.02);
         }
 
         ul, ol {
@@ -88,7 +90,6 @@
             color: var(--text-main);
         }
 
-        /* Buttons */
         .btn {
             display: inline-block;
             padding: 12px 24px;
@@ -109,13 +110,24 @@
             box-shadow: 0 0 15px var(--neon-green);
         }
 
-        /* Footer */
         footer {
             text-align: center;
             border-top: 1px solid #333;
             padding-top: 20px;
-            font-size: 0.9rem;
-            color: #666;
+            font-size: 0.8rem;
+            color: #555;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        footer a {
+            color: #555;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        
+        footer a:hover {
+            color: var(--neon-green);
         }
     </style>
 </head>
@@ -132,54 +144,63 @@
 
         <main>
             <div class="section-box">
-                <h2>I. The Squelch Policy</h2>
-                <p>Developed by Enochian Studios, ParaNode is built on a strict "Privacy-First" architecture. Your data, your evidence, and your location remain strictly on your physical device.</p>
-                <ul>
-                    <li><span><strong>Zero Data Collection:</strong> We do not track, harvest, or sell your telemetry.</span></li>
-                    <li><span><strong>Offline Operation:</strong> Designed for remote locations with zero cellular service.</span></li>
-                    <li><span><strong>No Accounts:</strong> No login, no password, no tracking.</span></li>
-                </ul>
-            </div>
-
-            <div class="section-box">
-                <h2>II. Field Deployment (Manual)</h2>
-                <p>ParaNode is a passive monitoring tool. For accurate forensic results:</p>
+                <h2>I. Field Deployment (Operations Manual)</h2>
+                <p>ParaNode is a passive environmental monitoring tool. For accurate forensic results, adhere to the following deployment protocol:</p>
                 <ol>
-                    <li><span><strong>Isolate:</strong> Place your device on a flat, stable surface away from power outlets or active electronics.</span></li>
-                    <li><span><strong>Calibrate:</strong> Press 'Calibrate' to establish a baseline. This filters out the natural "noise" of the room's electromagnetic field.</span></li>
-                    <li><span><strong>Monitor:</strong> Observe the real-time graph for anomalous spikes breaking the threshold.</span></li>
+                    <li><span><strong>Isolate:</strong> Place your device on a flat, stable surface away from power outlets, breaker boxes, or active electronics to prevent false positives.</span></li>
+                    <li><span><strong>Calibrate:</strong> Press 'Calibrate' to establish a dynamic baseline. This squelches the natural "noise" of the room's baseline electromagnetic field.</span></li>
+                    <li><span><strong>Monitor:</strong> Observe the real-time graph for anomalous spikes breaking the established threshold.</span></li>
                 </ol>
             </div>
 
             <div class="section-box">
-                <h2>III. Diagnostic Modes</h2>
-                <p>Toggle between primary analysis engines depending on your investigation style:</p>
+                <h2>II. Environmental Diagnostics (EMF)</h2>
+                <p>Utilizing the high-fidelity magnetometer found in modern flagship devices, ParaNode provides real-time, triple-axis visualization of electromagnetic flux.</p>
                 <ul>
-                    <li><span><strong>The Phonetic Node:</strong> A proprietary engine featuring over 210,000 words triggered by precise magnetic flux changes, not randomized timers.</span></li>
-                    <li><span><strong>Raw Data Node:</strong> Bypasses phonetic interpretation entirely to provide unfiltered, raw sensor telemetry.</span></li>
+                    <li><span><strong>Microtesla (µT) Precision:</strong> Track fluctuations with sub-millisecond refresh rates.</span></li>
+                    <li><span><strong>Adjustable Sensitivity:</strong> Fine-tune the sensor gate to filter out micro-fluctuations or capture the slightest anomalies.</span></li>
+                    <li><span><strong>Hardware Requirement:</strong> A physical Magnetometer (Compass) sensor is required. If your device lacks this hardware, EMF functionality is disabled.</span></li>
+                </ul>
+            </div>
+
+            <div class="section-box">
+                <h2>III. Diagnostic Modes</h2>
+                <p>Toggle between primary analysis engines depending on your investigation parameters:</p>
+                <ul>
+                    <li><span><strong>The Phonetic Node:</strong> A proprietary engine featuring over 210,000 words. Words are triggered exclusively by precise magnetic flux changes crossing specific thresholds, bypassing randomized timers.</span></li>
+                    <li><span><strong>Raw Data Node:</strong> Bypasses phonetic interpretation entirely to provide unfiltered, raw sensor telemetry for purists monitoring strict numerical variations.</span></li>
                 </ul>
             </div>
 
             <div class="section-box">
                 <h2>IV. Forensic Data Analysis (Pro)</h2>
-                <p>The Pro Node upgrade unlocks full forensic potential for professional investigations.</p>
+                <p>The Pro Node upgrade unlocks full forensic potential for professional field researchers.</p>
                 <ul>
-                    <li><span><strong>Custom Nodes:</strong> Tailor parameters by importing targeted phonetic dictionaries to isolate location-specific responses.</span></li>
-                    <li><span><strong>Session Export (.WAV):</strong> Export phonetic session logs and audio data directly for client reports.</span></li>
-                    <li><span><strong>Extended Buffering:</strong> Analyze longer windows of data for subtle patterns.</span></li>
+                    <li><span><strong>Custom Nodes:</strong> Tailor parameters by importing targeted phonetic dictionaries to isolate location-specific historical responses.</span></li>
+                    <li><span><strong>Session Export (.WAV):</strong> Export phonetic session logs and audio data directly to your local storage for external review and client reports.</span></li>
+                    <li><span><strong>Extended Buffering:</strong> Analyze longer windows of data for subtle, repeating patterns over time.</span></li>
                 </ul>
             </div>
 
-            <div class="section-box">
-                <h2>Hardware Requirements</h2>
-                <p>ParaNode is a hardware-dependent utility requiring a physical Magnetometer (Compass) sensor. Optimized for high-end flagship devices.</p>
-                <p><em>*Note: If your device lacks a magnetometer, EMF functionality will be disabled.</em></p>
+            <div class="section-box policy-box" id="privacy">
+                <h2 style="color: #ff3333;">V. The Squelch Policy (Privacy & Telemetry)</h2>
+                <p>Developed by Enochian Studios in San Antonio, Texas, ParaNode operates on a strict "Privacy-First Squelch Policy." Professional investigators require tools that do not compromise their location, their clients, or their data.</p>
+                <ul>
+                    <li><span><strong>Zero Data Harvesting:</strong> ParaNode does not track, collect, or sell your telemetry, audio recordings, or usage metrics.</span></li>
+                    <li><span><strong>100% Offline Architecture:</strong> No internet connection is required. ParaNode is engineered for deployment in remote locations, abandoned structures, and deep woods with zero cellular service.</span></li>
+                    <li><span><strong>Local Storage Only:</strong> All session logs, exports, and Custom Node configurations remain strictly on your physical hardware. We have no access to your evidence.</span></li>
+                    <li><span><strong>No Accounts:</strong> No login credentials, no passwords, no cloud syncing, and no tracking cookies.</span></li>
+                </ul>
             </div>
         </main>
 
         <footer>
             <p>Enochian Studios &copy; 2026</p>
             <p>Technical Support: paranode.dev@gmail.com</p>
+            <p style="margin-top: 15px;">
+                <a href="#privacy">Privacy Policy</a> | 
+                <a href="#privacy">Terms of Deployment</a>
+            </p>
         </footer>
     </div>
 
