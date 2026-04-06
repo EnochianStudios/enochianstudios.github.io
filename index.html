@@ -90,6 +90,14 @@
             color: var(--text-main);
         }
 
+        .btn-container {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
         .btn {
             display: inline-block;
             padding: 12px 24px;
@@ -101,7 +109,6 @@
             letter-spacing: 1px;
             transition: all 0.2s ease-in-out;
             background: rgba(0, 255, 65, 0.05);
-            margin-top: 10px;
         }
 
         .btn:hover {
@@ -139,7 +146,10 @@
             <h1>Enochian Studios</h1>
             <div class="tagline">High-Precision Paranormal Utilities</div>
             <p>Stop "Hunting." Start Investigating.</p>
-            <a href="#" class="btn">Download ParaNode for Android</a>
+            <div class="btn-container">
+                <a href="#" class="btn">Download ParaNode</a>
+                <a href="#" class="btn">Download VoxNode</a>
+            </div>
         </header>
 
         <main>
@@ -173,7 +183,17 @@
             </div>
 
             <div class="section-box">
-                <h2>IV. Forensic Data Analysis (Pro)</h2>
+                <h2>IV. VoxNode Deployment (ITC Telemetry)</h2>
+                <p>Designed to operate independently or alongside ParaNode, VoxNode is our dedicated Instrumental Trans-Communication (ITC) utility.</p>
+                <ul>
+                    <li><span><strong>Algorithmic Sweeping:</strong> Rapidly scans audio fragments to prevent aural pareidolia, forcing deliberate phonetic manipulation from the environment.</span></li>
+                    <li><span><strong>Dynamic Noise Gating:</strong> Filters standard acoustic static to isolate actionable audio anomalies.</span></li>
+                    <li><span><strong>Offline Synthesizer:</strong> Completely self-contained phoneme generation requires zero external radio interference or internet connection.</span></li>
+                </ul>
+            </div>
+
+            <div class="section-box">
+                <h2>V. Forensic Data Analysis (Pro)</h2>
                 <p>The Pro Node upgrade unlocks full forensic potential for professional field researchers.</p>
                 <ul>
                     <li><span><strong>Custom Nodes:</strong> Tailor parameters by importing targeted phonetic dictionaries to isolate location-specific historical responses.</span></li>
@@ -183,11 +203,11 @@
             </div>
 
             <div class="section-box policy-box" id="privacy">
-                <h2 style="color: #ff3333;">V. The Squelch Policy (Privacy & Telemetry)</h2>
-                <p>Developed by Enochian Studios in San Antonio, Texas, ParaNode operates on a strict "Privacy-First Squelch Policy." Professional investigators require tools that do not compromise their location, their clients, or their data.</p>
+                <h2 style="color: #ff3333;">VI. The Squelch Policy (Privacy & Telemetry)</h2>
+                <p>Developed by Enochian Studios in San Antonio, Texas, our applications operate on a strict "Privacy-First Squelch Policy." Professional investigators require tools that do not compromise their location, their clients, or their data.</p>
                 <ul>
-                    <li><span><strong>Zero Data Harvesting:</strong> ParaNode does not track, collect, or sell your telemetry, audio recordings, or usage metrics.</span></li>
-                    <li><span><strong>100% Offline Architecture:</strong> No internet connection is required. ParaNode is engineered for deployment in remote locations, abandoned structures, and deep woods with zero cellular service.</span></li>
+                    <li><span><strong>Zero Data Harvesting:</strong> We do not track, collect, or sell your telemetry, audio recordings, or usage metrics.</span></li>
+                    <li><span><strong>100% Offline Architecture:</strong> No internet connection is required. Our utilities are engineered for deployment in remote locations, abandoned structures, and deep woods with zero cellular service.</span></li>
                     <li><span><strong>Local Storage Only:</strong> All session logs, exports, and Custom Node configurations remain strictly on your physical hardware. We have no access to your evidence.</span></li>
                     <li><span><strong>No Accounts:</strong> No login credentials, no passwords, no cloud syncing, and no tracking cookies.</span></li>
                 </ul>
